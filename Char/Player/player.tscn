@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b6gxdrylu78qa"]
+[gd_scene load_steps=27 format=3 uid="uid://b6gxdrylu78qa"]
 
 [ext_resource type="Script" path="res://Char/scripts/Basic Movement.gd" id="1_s3rh0"]
 [ext_resource type="Texture2D" uid="uid://dxn588sky8mcm" path="res://Char/Player/Sprite/player_movement-sheet.png" id="2_rvwuo"]
@@ -186,9 +186,6 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adm8n"]
 size = Vector2(17, 29)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3xbu"]
-size = Vector2(19, 31)
-
 [node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
@@ -220,12 +217,3 @@ parameters/Walk/blend_position = Vector2(-0.00498134, 0.00196457)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_adm8n")
-
-[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
-position = Vector2(0.5, 0.5)
-priority = 1.0
-
-[node name="Hitbox" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
-shape = SubResource("RectangleShape2D_w3xbu")
-
-[connection signal="area_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
