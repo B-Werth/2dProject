@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwjooh0lthivb"]
+
+[ext_resource type="Texture2D" uid="uid://dxn588sky8mcm" path="res://Char/Player/Sprite/player_movement-sheet.png" id="1_b525w"]
+
+[node name="PlayerInBattle" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_b525w")
+hframes = 29
+frame = 27
