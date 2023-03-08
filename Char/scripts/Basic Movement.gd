@@ -40,4 +40,11 @@ func pick_new_state():
 
 func _inventarManager():
 	if(Input.is_action_just_pressed("ui_cancel")):
-		print_debug("Moinsen")
+		print_debug("yikes")
+
+
+
+
+func _on_area_2d_area_entered(area:Area2D):
+	if area.get_parent().name.begins_with("enemy"):
+		print(area.get_parent().get_name())
