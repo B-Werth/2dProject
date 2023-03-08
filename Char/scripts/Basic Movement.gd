@@ -40,4 +40,4 @@ func pick_new_state():
 
 func _inventarManager():
 	if(Input.is_action_just_pressed("ui_cancel")):
-		print_debug("hi")
+		print_debug("Moinsen")
